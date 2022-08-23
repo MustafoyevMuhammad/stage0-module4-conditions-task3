@@ -2,33 +2,27 @@ package school.mjc.stage0.conditions.task3;
 
 public class DaysInMonthPrinter {
         public void amountOfDays(int month) {
-        if (month > 0 && month <= 12) {
-            if (month == 1)
-                System.out.println(31);
-            if (month == 2)
-                System.out.println(28);
-            if (month == 3)
-                System.out.println(31);
-            if (month == 4)
+        switch (month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                System.out.println("31");
+                break;
+            case 2:
+                System.out.println("28");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
                 System.out.println(30);
-            if (month == 5)
-                System.out.println(31);
-            if (month == 6)
-                System.out.println(30);
-            if (month == 7)
-                System.out.println(31);
-            if (month == 8)
-                System.out.println(31);
-            if (month == 9)
-                System.out.println(30);
-            if (month == 10)
-                System.out.println(31);
-            if (month == 11)
-                System.out.println(30);
-            if (month == 12)
-                System.out.println(31);
+                break;
+            default:
+                System.out.println("wrong number!");
         }
-        else
-            System.out.println("wrong number!");
     }
 }
